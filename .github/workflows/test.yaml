@@ -38,6 +38,6 @@ jobs:
           BACKEND_URL: "https://78d9-136-233-9-106.ngrok-free.app/pullrequest/closed"
         run: |
 
-          payload="{\"username\":\"$GITHUB_USERNAME\",\"issue_tags\":\"$ISSUE_TAGS\", \"issue_url\":\"$ISSUE_URL\", \"pr_url\":\"$PR_URL"}"
+          payload="{\"username\":\"$GITHUB_USERNAME\",\"issue_tags\":\"$ISSUE_TAGS\", \"issue_url\":\"$ISSUE_URL\", \"pr_url\":\"$PR_URL\"}"
 
           curl -X POST -H "Authorization: $AUTHORIZATION_HEADER" -H "Content-Type: application/json" -d "$payload" "$BACKEND_URL"
