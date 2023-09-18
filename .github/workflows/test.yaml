@@ -37,6 +37,7 @@ jobs:
           AUTHORIZATION_HEADER: ${{secrets.AUTH}}
           BACKEND_URL: ${{secrets.BACKEND_URL}}
         run: |
+          echo "${AUTHORIZATION_HEADER}"
 
           payload="{\"username\":\"$GITHUB_USERNAME\",\"issue_tags\":\"$ISSUE_TAGS\", \"issue_url\":\"$ISSUE_URL\", \"pr_url\":\"$PR_URL\"}"
 
