@@ -34,8 +34,8 @@ jobs:
           ISSUE_TAGS: ${{ steps.process_input.outputs.issue_tags }} 
           PR_URL: ${{ github.event.pull_request.url }}
           ISSUE_URL: ${{github.event.pull_request.issue_url}}
-          AUTHORIZATION_HEADER: $AUTH
-          BACKEND_URL: $BACKEND_URL
+          AUTHORIZATION_HEADER: ${{ env.AUTH }}
+          BACKEND_URL: ${{ env.BACKEND_URL }}
         run: |
 
           payload="{\"username\":\"$GITHUB_USERNAME\",\"issue_tags\":\"$ISSUE_TAGS\", \"issue_url\":\"$ISSUE_URL\", \"pr_url\":\"$PR_URL\"}"
