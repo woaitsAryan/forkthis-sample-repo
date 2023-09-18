@@ -2,8 +2,8 @@ name: Trigger on PR Merge with Comment
 
 on:
   pull_request:
-    types:
-      - closed
+    branches:
+      main
 
 jobs:
   send-notification:
