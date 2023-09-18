@@ -17,6 +17,7 @@ jobs:
           issue_tags=""
           title=$(curl -s "https://api.github.com/repos/${GITHUB_REPOSITORY}/pulls/${pr_number}" | jq -r '.title')
           echo "${title}"
+          echo "${GITHUB_REPOSITORY}"
           if [[ "$title" =~ fixes\ #[0-9]+ ]]; then
             echo "yay"
             merge_title=true
